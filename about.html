@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Saad Rekiek</title>
+<meta name="theme-color" content="#f5f2ed">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap">
+  <a href="index.html" class="nav-name">Saad Rekiek</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+</div></nav>
+
+<div class="page-body">
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="section-label rv">About</div>
+    <h1 class="rv"><em>Who</em> I am</h1>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text rv">
+        <p>Robotics engineer specialising in <strong>deep learning for robotic perception</strong> and <strong>vision-based manipulation</strong>. I build end-to-end pick-and-place systems on industrial robot arms, combining 2D/3D object detection, segmentation, 6-DoF pose estimation, grasp planning, and real-time force-based control.</p>
+        <p>Grounded in robot kinematics, dynamics and control from an electromechanical engineering background. Experienced in evaluating and calibrating sensors for high-quality training data, validating algorithms on real-world datasets, and documenting systems for reproducible deployment.</p>
+        <p>Currently <strong>Founding Robotics AI Engineer & Tech Lead at Motion One</strong>, owning the full perception-to-manipulation stack from pre-seed onward. Previously built the intelligent grasping framework at <strong>imec</strong> in Brussels.</p>
+      </div>
+      <div class="about-aside rv">
+        <div class="aside-title">Languages</div>
+        <div class="lang-row">Français <span class="lang-lvl">NATIVE</span></div>
+        <div class="lang-row">English <span class="lang-lvl">C1</span></div>
+        <div class="lang-row">Nederlands <span class="lang-lvl">B1</span></div>
+        <div class="lang-row">Deutsch <span class="lang-lvl">BEGINNER</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Skills -->
+<section>
+  <div class="wrap">
+    <div class="section-label rv">Skills</div>
+    <h2 class="section-title rv">Technical stack</h2>
+    <div class="skills-flow">
+      <div class="skill-card rv"><h3>2D/3D Vision & Deep Learning</h3><p>YOLO, SAM, 6-DoF pose estimation, CNNs, transformers, PyTorch, TensorFlow, OpenCV, point clouds, 3D reconstruction, stereo vision.</p></div>
+      <div class="skill-card rv"><h3>Vision-Based Manipulation</h3><p>Pick-and-place on UR3e, grasp planning, cluttered-scene selection, MoveIt 2, motion planning, hand-eye integration.</p></div>
+      <div class="skill-card rv"><h3>Kinematics, Dynamics & Control</h3><p>Forward/inverse kinematics, cascaded PID, MPC, real-time force control, whole-body control.</p></div>
+      <div class="skill-card rv"><h3>Sensors & Data Quality</h3><p>Camera calibration, RGB-D (RealSense), 3D force/torque sensors, multi-sensor fusion, dataset curation.</p></div>
+      <div class="skill-card rv"><h3>Simulation & Validation</h3><p>Isaac Sim / Lab, MuJoCo, Gazebo, CoppeliaSim, MATLAB, Simulink, real-world benchmarking.</p></div>
+      <div class="skill-card rv"><h3>Software & Systems</h3><p>C/C++, Python, ROS / ROS 2, Linux, Docker, Git, TensorRT, Jetson Orin, Weights & Biases.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Education -->
+<section>
+  <div class="wrap">
+    <div class="section-label rv">Education</div>
+    <div class="edu-row rv">
+      <div class="edu-date">Sep 2023 – Sep 2025</div>
+      <div>
+        <div class="edu-degree">M.Sc. Electromechanical Engineering, Robotics & Mechatronics</div>
+        <div class="edu-school">Brussels Faculty of Engineering (VUB & ULB)</div>
+        <span class="edu-badge">Distinction · Thesis 19/20</span>
+      </div>
+    </div>
+    <div class="edu-row rv">
+      <div class="edu-date">Sep 2020 – Sep 2023</div>
+      <div>
+        <div class="edu-degree">B.Sc. Electromechanical Engineering</div>
+        <div class="edu-school">Université Libre de Bruxelles</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer><div class="wrap">Saad Rekiek · Brussels, Belgium · <span id="yr"></span></div></footer>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+t.addEventListener('click',()=>{l.classList.toggle('open');t.textContent=l.classList.contains('open')?'✕':'☰';});
+l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{l.classList.remove('open');t.textContent='☰';}));
+const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');o.unobserve(x.target);}});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el=>o.observe(el));
+</script>
+</body>
+</html>

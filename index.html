@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saad Rekiek | Robotics AI Engineer</title>
+<meta name="description" content="Robotics engineer specialising in 3D vision, pose estimation and vision-based robot control.">
+<meta name="theme-color" content="#f5f2ed">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="nav-name">Saad Rekiek</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<div class="page-body">
+
+<header class="hero" style="padding:160px 0 80px;">
+  <div class="wrap">
+    <div class="rv" style="max-width:820px;">
+      <h1 style="font-family:var(--ff-serif);font-size:clamp(3rem,7vw,5.5rem);font-weight:400;line-height:1.0;margin-bottom:20px;letter-spacing:-0.02em;">Saad Rekiek,<br><em style="font-style:italic;color:var(--blue);">Robotics AI</em> Engineer</h1>
+      <p style="font-size:clamp(1.05rem,2vw,1.25rem);color:var(--text-2);max-width:600px;margin-bottom:32px;">I build perception-to-manipulation systems, from 3D vision and pose estimation to grasp planning and force control, deployed and validated on industrial robot arms.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+        <a href="projects.html" class="btn btn-primary">See my work →</a>
+        <a href="/cv-saad-rekiek.pdf" class="btn btn-secondary">Download CV</a>
+        <div class="socials" style="margin-left:8px;">
+          <a href="https://linkedin.com/in/saad-rekiek" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.82-.26.82-.58l-.02-2.05c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.62-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .32.2.7.82.58A12 12 0 0 0 12 .3"/></svg>
+          </a>
+          <a href="mailto:saad.rekiek@outlook.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Featured project teaser -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-label rv">Featured project</div>
+    <div class="featured-media rv">
+      <div class="media-placeholder">
+        <div class="ph-icon">▶</div>
+        <p>Your main demo video goes here</p>
+      </div>
+    </div>
+    <div class="featured-bottom rv">
+      <div>
+        <span class="showcase-badge badge-grade">Thesis · 19/20</span>
+        <h2 class="featured-title">Bridging Robot Reasoning and Physical Reality via an Intelligent Grasping Framework</h2>
+      </div>
+      <div>
+        <p class="showcase-desc">Dynamic grasping algorithm with adaptive force sensing, 6-DoF pose estimation, and real-time control informed by object properties. Integrated a VLM into a ROS 2 pipeline to infer affordances (fragility, transparency, containment) and guide grasp planning.</p>
+        <div style="margin-top:18px;">
+          <a href="projects.html" class="showcase-link">All projects →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer><div class="wrap">Saad Rekiek · Brussels, Belgium · <span id="yr"></span></div></footer>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+t.addEventListener('click',()=>{l.classList.toggle('open');t.textContent=l.classList.contains('open')?'✕':'☰';});
+l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{l.classList.remove('open');t.textContent='☰';}));
+const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');o.unobserve(x.target);}});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el=>o.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience | Saad Rekiek</title>
+<meta name="theme-color" content="#f5f2ed">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap">
+  <a href="index.html" class="nav-name">Saad Rekiek</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html" class="active">Experience</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+</div></nav>
+
+<div class="page-body">
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="section-label rv">Experience</div>
+    <h1 class="rv">Where I've <em>built</em> things</h1>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="exp-grid">
+
+      <div class="exp-card main rv">
+        <div class="exp-date">Dec 2025 – Present</div>
+        <div class="exp-role">Founding Robotics AI Engineer & Tech Lead</div>
+        <div class="exp-org">Motion One</div>
+        <ul class="exp-body">
+          <li>Principal engineer through the pre-seed fundraise, owning technical direction across perception and manipulation.</li>
+          <li>Deep learning models (CNN + transformer) processing vision and depth for manipulation on robot hardware.</li>
+          <li>Real-time inference on NVIDIA Jetson Orin (TensorRT), simulation environments (Isaac Lab, MuJoCo).</li>
+          <li>Demo-learning pipelines (teleoperation, Manus gloves, GoPro) with trajectory retargeting.</li>
+          <li>Whole-body control, SLAM localisation, Nav2 navigation in multi-package ROS 2.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card rv">
+        <div class="exp-date">Oct 2024 – Sep 2025</div>
+        <div class="exp-role">AI & Robotics Researcher</div>
+        <div class="exp-org">imec, Brussels</div>
+        <ul class="exp-body">
+          <li>Vision-based pick-and-place on UR3e with 6-DoF pose estimation, grasp planning, force control.</li>
+          <li>Vision-language reasoning layer (VLM) for grasp selection in ROS 2.</li>
+        </ul>
+        <div class="exp-chips">
+          <span class="chip">95% pose precision</span>
+          <span class="chip">85%+ grasp success</span>
+        </div>
+      </div>
+
+      <div class="exp-card rv">
+        <div class="exp-date">May 2025</div>
+        <div class="exp-role">Developer & Demo Exhibitor</div>
+        <div class="exp-org">ITF World 2025, imec</div>
+        <ul class="exp-body">
+          <li>Adaptive grasping framework with Melexis 3D force sensors, showcased live at conference.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card rv">
+        <div class="exp-date">Aug – Oct 2024</div>
+        <div class="exp-role">Software Engineer Intern</div>
+        <div class="exp-org">Institut Jules Bordet</div>
+        <ul class="exp-body">
+          <li>End-to-end patient management system for clinical workflows. AI decision-support prototypes.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card rv">
+        <div class="exp-date">Sep 2023 – Jun 2024</div>
+        <div class="exp-role">Research Assistant</div>
+        <div class="exp-org">École Polytechnique de Bruxelles</div>
+        <ul class="exp-body">
+          <li>Motion-planning for KUKA youBot, including APF navigation with novel local-minima escape strategies.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer><div class="wrap">Saad Rekiek · Brussels, Belgium · <span id="yr"></span></div></footer>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+t.addEventListener('click',()=>{l.classList.toggle('open');t.textContent=l.classList.contains('open')?'✕':'☰';});
+l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{l.classList.remove('open');t.textContent='☰';}));
+const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');o.unobserve(x.target);}});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el=>o.observe(el));
+</script>
+</body>
+</html>
